@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Master</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title-container">
+                <i class="fas fa-th-large sudoku-icon"></i>
+                <div>
+                    <h1>Sudoku Master</h1>
+                    <p class="subtitle">Challenge your logic skills</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div class="controls">
+                <div class="timer">Time: <span id="time">00:00</span></div>
+                <div class="stats">Solved: <span id="solved-count">0</span></div>
+                <button id="new-game" class="btn">New Game</button>
+                <button id="check-solution" class="btn">Check Solution</button>
+                <button id="reset" class="btn">Reset</button>
+                <button id="hint" class="btn">Hint</button>
+                <select id="difficulty" class="btn">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <div class="sudoku-board" id="board"></div>
+
+            <div class="messages">
+                <div id="message" class="message"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to reset the current game?</p>
+            <div class="modal-buttons">
+                <button id="confirm-reset" class="btn">Yes</button>
+                <button id="cancel-reset" class="btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
